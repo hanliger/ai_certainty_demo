@@ -81,7 +81,7 @@ function renderLanding(saved) {
   app.innerHTML = h`
     <header class="hero">
       <h1>${e(data.config.experiment_title)}</h1>
-      <p class="lead">본 실험에서는 <strong>총 ${totalTrials()}개의 구매 의사결정</strong>(3개 역할 × 각 3개 시나리오)을 수행하게 됩니다.</p>
+      <p class="lead">본 실험에서는 <strong>총 ${data.config.scenario_order.length}개의 구매 의사결정</strong>(3개 역할 × 각 3개 시나리오)을 수행하게 됩니다.</p>
     </header>
     <section class="card">
       <p>각 의사결정에서 제품 비교표와 추가 정보를 확인하고, 가장 적절하다고 생각하는 제품을 선택해 주세요. 정답은 없습니다.</p>
