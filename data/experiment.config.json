@@ -8,8 +8,7 @@
     "H": { "label": "유보형", "description": "불확실성과 조건부 판단 강조" }
   },
   "condition_sequences": [
-    ["N", "C", "H"], ["C", "H", "N"], ["H", "N", "C"],
-    ["N", "H", "C"], ["C", "N", "H"], ["H", "C", "N"]
+    ["N", "C", "H"], ["N", "H", "C"]
   ],
   "scenario_order": [
     "P1_S1", "P1_S2", "P1_S3",
