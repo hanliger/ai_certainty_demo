@@ -1,0 +1,22 @@
+{
+  "experiment_id": "ai_certainty_purchase_decision_0617",
+  "experiment_title": "AI 응답의 확신 표현이 구매 의사결정에 미치는 영향",
+  "assignment_mode": "within_subject_balanced_by_persona",
+  "conditions": {
+    "N": { "label": "중립형", "description": "AI Assistant 의견 없음" },
+    "C": { "label": "확신형", "description": "단정적 추천 및 명확한 결론 제시" },
+    "H": { "label": "유보형", "description": "불확실성과 조건부 판단 강조" }
+  },
+  "condition_sequences": [
+    ["N", "C", "H"], ["C", "H", "N"], ["H", "N", "C"],
+    ["N", "H", "C"], ["C", "N", "H"], ["H", "C", "N"]
+  ],
+  "scenario_order": [
+    "P1_S1", "P1_S2", "P1_S3",
+    "P2_S1", "P2_S2", "P2_S3",
+    "P3_S1", "P3_S2", "P3_S3"
+  ],
+  "download": { "json": true, "csv": true, "filename_prefix": "AIcertainty" },
+  "autosave": { "enabled": true, "local_storage_key": "ai_certainty_purchase_decision_state_v1" },
+  "remote": { "submit_url": null, "method": "POST" }
+}

@@ -1,0 +1,34 @@
+﻿field_name,type,description,level
+participant_id,string,User-entered subject ID,session
+session_id,string,Generated UUID,session
+assignment_mode,string,Randomization mode,session
+assignment_seed,string,Seed based on participant_id/session_id,session
+trial_index,integer,1-based trial order,trial
+persona_id,string,P1/P2/P3,trial
+scenario_id,string,"Base scenario ID, e.g. P1_S1",trial
+condition,string,N/C/H,trial
+stimulus_id,string,"Scenario-condition ID, e.g. P1_S1_C",trial
+selected_option,string,A/B/C product selected,trial
+selected_product_label,string,Vendor/model label,trial
+decision_response_time_ms,number,RT from full trial page render to first product selection click,trial
+choice_reason,string,Optional reason text,trial
+decision_confidence,integer/null,방금 내린 구매 결정에 얼마나 확신이 있습니까?,trial_post
+trust_ai,integer/null,제시된 AI Assistant의 답변을 얼마나 신뢰하십니까?,trial_post
+helpfulness_ai,integer/null,AI Assistant의 답변이 제품 선택에 도움이 되었다고 느끼십니까?,trial_post
+expertise_ai,integer/null,AI Assistant의 답변이 해당 분야에 대한 전문적 판단을 반영한다고 느끼십니까?,trial_post
+objectivity_ai,integer/null,AI Assistant의 답변이 특정 제품에 치우치지 않고 객관적으로 느껴졌습니까?,trial_post
+perceived_uncertainty,integer/null,이 의사결정 상황에서 판단하기 어려운 불확실성이 크다고 느꼈습니까?,trial_post
+ai_influence,integer/null,AI Assistant의 답변이 귀하의 최종 선택에 영향을 주었다고 느끼십니까?,trial_post
+perceived_ai_certainty,integer/null,AI Assistant의 답변은 전반적으로 얼마나 확신 있게 느껴졌습니까?,manipulation
+conclusion_clarity,integer/null,AI Assistant의 답변은 결론을 명확하게 제시했다고 느꼈습니까?,manipulation
+age_group,string/integer/null,연령대,demographics
+gender,string/integer/null,성별,demographics
+education,string/integer/null,최종 학력,demographics
+ai_use_frequency,string/integer/null,생성형 AI 사용 빈도,demographics
+purchase_decision_experience,string/integer/null,고가 제품/장비 구매 의사결정 경험,demographics
+medical_device_knowledge,string/integer/null,의료장비 관련 사전지식,demographics
+robotics_knowledge,string/integer/null,제조/로봇 장비 관련 사전지식,demographics
+cafe_equipment_knowledge,string/integer/null,카페/주방 설비 관련 사전지식,demographics
+trial_page_rendered_at_iso,ISO datetime,Audit timestamp for trial render,timing
+decision_clicked_at_iso,ISO datetime,Audit timestamp for product click,timing
+total_trial_time_ms,number,Trial total time,timing

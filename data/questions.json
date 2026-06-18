@@ -1,0 +1,215 @@
+{
+  "post_trial": [
+    {
+      "name": "decision_confidence",
+      "text": "방금 내린 구매 결정에 얼마나 확신이 있습니까?",
+      "type": "likert_1_5",
+      "scale": {
+        "1": "전혀 그렇지 않다",
+        "2": "그렇지 않다",
+        "3": "보통이다",
+        "4": "그렇다",
+        "5": "매우 그렇다"
+      },
+      "show_when": "always"
+    },
+    {
+      "name": "trust_ai",
+      "text": "제시된 AI Assistant의 답변을 얼마나 신뢰하십니까?",
+      "type": "likert_1_5",
+      "scale": {
+        "1": "전혀 그렇지 않다",
+        "2": "그렇지 않다",
+        "3": "보통이다",
+        "4": "그렇다",
+        "5": "매우 그렇다"
+      },
+      "show_when": "condition != 'N'"
+    },
+    {
+      "name": "helpfulness_ai",
+      "text": "AI Assistant의 답변이 제품 선택에 도움이 되었다고 느끼십니까?",
+      "type": "likert_1_5",
+      "scale": {
+        "1": "전혀 그렇지 않다",
+        "2": "그렇지 않다",
+        "3": "보통이다",
+        "4": "그렇다",
+        "5": "매우 그렇다"
+      },
+      "show_when": "condition != 'N'"
+    },
+    {
+      "name": "expertise_ai",
+      "text": "AI Assistant의 답변이 해당 분야에 대한 전문적 판단을 반영한다고 느끼십니까?",
+      "type": "likert_1_5",
+      "scale": {
+        "1": "전혀 그렇지 않다",
+        "2": "그렇지 않다",
+        "3": "보통이다",
+        "4": "그렇다",
+        "5": "매우 그렇다"
+      },
+      "show_when": "condition != 'N'"
+    },
+    {
+      "name": "objectivity_ai",
+      "text": "AI Assistant의 답변이 특정 제품에 치우치지 않고 객관적으로 느껴졌습니까?",
+      "type": "likert_1_5",
+      "scale": {
+        "1": "전혀 그렇지 않다",
+        "2": "그렇지 않다",
+        "3": "보통이다",
+        "4": "그렇다",
+        "5": "매우 그렇다"
+      },
+      "show_when": "condition != 'N'"
+    },
+    {
+      "name": "perceived_uncertainty",
+      "text": "이 의사결정 상황에서 판단하기 어려운 불확실성이 크다고 느꼈습니까?",
+      "type": "likert_1_5",
+      "scale": {
+        "1": "전혀 그렇지 않다",
+        "2": "그렇지 않다",
+        "3": "보통이다",
+        "4": "그렇다",
+        "5": "매우 그렇다"
+      },
+      "show_when": "always"
+    },
+    {
+      "name": "ai_influence",
+      "text": "AI Assistant의 답변이 귀하의 최종 선택에 영향을 주었다고 느끼십니까?",
+      "type": "likert_1_5",
+      "scale": {
+        "1": "전혀 그렇지 않다",
+        "2": "그렇지 않다",
+        "3": "보통이다",
+        "4": "그렇다",
+        "5": "매우 그렇다"
+      },
+      "show_when": "condition != 'N'"
+    }
+  ],
+  "manipulation_check": [
+    {
+      "name": "perceived_ai_certainty",
+      "text": "AI Assistant의 답변은 전반적으로 얼마나 확신 있게 느껴졌습니까?",
+      "type": "likert_1_5",
+      "scale": {
+        "1": "매우 유보적/전혀 그렇지 않다",
+        "5": "매우 확신적/매우 그렇다"
+      },
+      "show_when": "participant saw at least one AI condition"
+    },
+    {
+      "name": "conclusion_clarity",
+      "text": "AI Assistant의 답변은 결론을 명확하게 제시했다고 느꼈습니까?",
+      "type": "likert_1_5",
+      "scale": {
+        "1": "매우 유보적/전혀 그렇지 않다",
+        "5": "매우 확신적/매우 그렇다"
+      },
+      "show_when": "participant saw at least one AI condition"
+    }
+  ],
+  "demographics": [
+    {
+      "name": "age_group",
+      "text": "연령대",
+      "type": "single_choice",
+      "options": [
+        "10대",
+        "20대",
+        "30대",
+        "40대",
+        "50대 이상",
+        "응답하지 않음"
+      ]
+    },
+    {
+      "name": "gender",
+      "text": "성별",
+      "type": "single_choice_with_other",
+      "options": [
+        "남성",
+        "여성",
+        "기타/직접기입",
+        "응답하지 않음"
+      ],
+      "other_option": "기타/직접기입"
+    },
+    {
+      "name": "education",
+      "text": "최종 학력",
+      "type": "single_choice",
+      "options": [
+        "고등학교 졸업 이하",
+        "대학교 재학/졸업",
+        "대학원 이상",
+        "응답하지 않음"
+      ]
+    },
+    {
+      "name": "ai_use_frequency",
+      "text": "생성형 AI 사용 빈도",
+      "type": "single_choice",
+      "options": [
+        "거의 사용하지 않음",
+        "월 1~3회",
+        "주 1~2회",
+        "주 3회 이상",
+        "거의 매일"
+      ]
+    },
+    {
+      "name": "purchase_decision_experience",
+      "text": "고가 제품/장비 구매 의사결정 경험",
+      "type": "likert_1_5_labeled",
+      "options": [
+        "전혀 없음",
+        "거의 없음",
+        "보통",
+        "많음",
+        "매우 많음"
+      ]
+    },
+    {
+      "name": "medical_device_knowledge",
+      "text": "의료장비 관련 사전지식",
+      "type": "likert_1_5_labeled",
+      "options": [
+        "전혀 없음",
+        "낮음",
+        "보통",
+        "높음",
+        "매우 높음"
+      ]
+    },
+    {
+      "name": "robotics_knowledge",
+      "text": "제조/로봇 장비 관련 사전지식",
+      "type": "likert_1_5_labeled",
+      "options": [
+        "전혀 없음",
+        "낮음",
+        "보통",
+        "높음",
+        "매우 높음"
+      ]
+    },
+    {
+      "name": "cafe_equipment_knowledge",
+      "text": "카페/주방 설비 관련 사전지식",
+      "type": "likert_1_5_labeled",
+      "options": [
+        "전혀 없음",
+        "낮음",
+        "보통",
+        "높음",
+        "매우 높음"
+      ]
+    }
+  ]
+}

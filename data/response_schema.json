@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ai_certainty_response.schema.json",
+  "title": "AI certainty purchase decision web-demo response",
+  "type": "object",
+  "required": [
+    "participant_id",
+    "session_id",
+    "experiment_id",
+    "started_at_iso",
+    "assignment",
+    "trials"
+  ],
+  "properties": {
+    "experiment_id": {
+      "type": "string"
+    },
+    "participant_id": {
+      "type": "string",
+      "description": "User-entered experimental subject ID"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Generated UUID for this browser session"
+    },
+    "started_at_iso": {
+      "type": "string"
+    },
+    "completed_at_iso": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_agent": {
+      "type": "string"
+    },
+    "assignment": {
+      "type": "object",
+      "required": [
+        "assignment_mode",
+        "assignment_seed",
+        "condition_by_scenario",
+        "trial_order"
+      ],
+      "properties": {
+        "assignment_mode": {
+          "type": "string"
+        },
+        "assignment_seed": {
+          "type": "string"
+        },
+        "condition_by_scenario": {
+          "type": "object"
+        },
+        "trial_order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "trials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "trial_index",
+          "scenario_id",
+          "persona_id",
+          "condition",
+          "selected_option",
+          "decision_response_time_ms"
+        ],
+        "properties": {
+          "trial_index": {
+            "type": "integer"
+          },
+          "scenario_id": {
+            "type": "string"
+          },
+          "persona_id": {
+            "type": "string"
+          },
+          "condition": {
+            "enum": [
+              "N",
+              "C",
+              "H"
+            ]
+          },
+          "stimulus_id": {
+            "type": "string",
+            "description": "scenario_id + '_' + condition, e.g. P1_S1_C"
+          },
+          "trial_page_rendered_at_iso": {
+            "type": "string"
+          },
+          "decision_clicked_at_iso": {
+            "type": "string"
+          },
+          "decision_response_time_ms": {
+            "type": "number"
+          },
+          "selected_option": {
+            "enum": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "selected_product_label": {
+            "type": "string"
+          },
+          "choice_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "post_answers": {
+            "type": "object",
+            "description": "Likert scores 1-5; AI-specific variables null in N condition"
+          },
+          "total_trial_time_ms": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "event_log": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "manipulation_check": {
+      "type": "object"
+    },
+    "demographics": {
+      "type": "object"
+    },
+    "exported_at_iso": {
+      "type": "string"
+    }
+  }
+}
